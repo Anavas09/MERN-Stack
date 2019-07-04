@@ -1,3 +1,7 @@
+## Description
+
+Un ejemplo de una aplicacion creada con el MERN-Stack (MongoDB, Express.js, React.js, Node.js)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
