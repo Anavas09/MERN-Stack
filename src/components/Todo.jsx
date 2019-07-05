@@ -7,9 +7,9 @@ import Edit from '@material-ui/icons/Edit';
 
 const Todo = (props) => (
     <tr>
-        <td>{props.todo.todo_description}</td>
-        <td>{props.todo.todo_responsible}</td>
-        <td>{props.todo.todo_priority}</td>
+        <td className={props.todo.todo_complete ? 'completed':''}>{props.todo.todo_description}</td>
+        <td className={props.todo.todo_complete ? 'completed':''}>{props.todo.todo_responsible}</td>
+        <td className={props.todo.todo_complete ? 'completed':''}>{props.todo.todo_priority}</td>
         <td>
             <IconButton
                 variant="contained"

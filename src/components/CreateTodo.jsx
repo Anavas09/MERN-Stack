@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import axios from 'axios';
 
 class CreateTodo extends Component {
@@ -17,14 +16,12 @@ class CreateTodo extends Component {
     }
 
     onChangeInput(e){
-        console.log(`Name: ${e.target.name}, Value: ${e.target.value}`)
         this.setState({
             [e.target.name]: e.target.value
         })
     }
 
     handleOnSubmit(e){
-        console.log(!this.state.todo_complete)
 
         const newTodo = {
             todo_complete: this.state.todo_complete,
@@ -37,7 +34,7 @@ class CreateTodo extends Component {
             .then(res => console.log(res.data))
         
         this.setState({
-            todo_complete: !this.state.todo_complete,
+            todo_complete: false,
             todo_description: '',
             todo_priority: '',
             todo_responsible: ''
@@ -116,9 +113,5 @@ class CreateTodo extends Component {
         );
     }
 }
-
-CreateTodo.propTypes = {
-
-};
 
 export default CreateTodo;
